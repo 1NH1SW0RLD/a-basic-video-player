@@ -3,20 +3,53 @@
   <title>Video Player</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="vPlayer.css" />
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  <link
+  href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css"
+  rel="stylesheet"
+/>
 </head>
-<video
-  id="vidPlayer"
-  src="your video here"
-  poster="/thumbnails"
-  autoplay
-></video>
-<progress id="timeline" value="0" max="100"></progress>
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+<br>
+<body>
+  <video
+    id="videoplayer"
+    class="video-js vjs-theme-sea"
+    controls
+    preload="auto"
+    width="960"
+    height="540"
+    poster="thumbnail.png"
+    data-setup="{}"
+  >
+    <source src="video.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+<br>
+<br>
 <div id="videoDetails">
-  <a href="tag/example">tag here</a>
-  <br>
+  <a href="tag/example">#tag</a>
   <br>
   <h1 id="title">TITLE</h1>
-  <p id="description">Test of description</p>
+  <div id="vidchannel">
+    <a href="/channel/user">1NH</a>
+  </div>
+  <div id="description">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
   <img id="resolution" src="#" />
 </div>
-<script src="player.js"></script>
+<script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+</body>

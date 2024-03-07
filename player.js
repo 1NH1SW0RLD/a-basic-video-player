@@ -16,9 +16,6 @@ if ((width == 1280 && height == 720) || (width == 1920 && height == 1080)) {
 var video = document.getElementById("vidPlayer");
   var timeline = document.getElementById("timeline");
 
-  // Set the maximum value of the timeline to the duration of the video
-  timeline.max = video.duration;
-
   // Update the value of the timeline as the video plays
   video.addEventListener("timeupdate", function() {
     timeline.value = video.currentTime;
